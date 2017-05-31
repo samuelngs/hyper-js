@@ -1,0 +1,24 @@
+{
+  "name": "hyper",
+  "version": "0.0.1",
+  "description": "hyper websocket client",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch",
+    "proto": "pbjs -t static-module -w es6 -o ./src/packet.js ./src/packet.proto",
+    "build": "npm run proto && webpack"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "protobufjs": "^6.7.3",
+    "webpack": "^2.6.0"
+  },
+  "dependencies": {
+    "uuid": "^3.0.1"
+  }
+}
